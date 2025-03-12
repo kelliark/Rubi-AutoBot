@@ -6,7 +6,7 @@ def display_miner_dashboard(bots):
     
     total_gems = sum(bot.last_ruby_block_swap_all for bot in bots)
     
-    print(f"{Back.MAGENTA}{Fore.WHITE}===== RUBI MINER DUNGEON =====")
+    print(f"{Back.MAGENTA}{Fore.WHITE}===== RUBI AUTO MINER =====")
     print(f"{Fore.CYAN}Active Miners: {Fore.WHITE}{len(bots)} | Total Gems: {Fore.YELLOW}{total_gems:.5f}")
     print()
     
