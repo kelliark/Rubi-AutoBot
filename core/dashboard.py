@@ -6,7 +6,7 @@ def display_miner_dashboard(bots):
     
     total_gems = sum(bot.last_ruby_block_swap_all for bot in bots)
     
-    print(f"{Back.MAGENTA}{Fore.WHITE}===== RUBI AUTO MINER =====")
+    print(f"{Back.MAGENTA}{Fore.WHITE}===== RUBI MINER BOT =====")
     print(f"{Fore.CYAN}Active Miners: {Fore.WHITE}{len(bots)} | Total Gems: {Fore.YELLOW}{total_gems:.5f}")
     print()
     
@@ -21,8 +21,11 @@ def display_miner_dashboard(bots):
         if home_info and 'data' in home_info and 'info' in home_info['data']:
             mining_speed = home_info['data']['info'].get('exploit_speed', 0)
         
-        if time_info and 'data' in time_info:
+        # Fix: Check that time_info['data'] is a dictionary before calling .get
+        if time_info and isinstance(time_info.get('data'), dict):
             remaining_time = time_info['data'].get('time_remain', 0)
+        else:
+            remaining_time = 0
         
         print(f"{Fore.BLUE}Miner: {Fore.WHITE}{bot.username} | Location: {Fore.MAGENTA}{bot.ip_info}")
         print(f"{Fore.GREEN}Gems: {Fore.YELLOW}{bot.last_ruby_block_swap_all:.5f} (+{Fore.YELLOW}{bot.gems_gained:.5f})")
