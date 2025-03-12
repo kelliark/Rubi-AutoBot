@@ -2,6 +2,16 @@
 
 A powerful bot for automatically mining gems on the Rubi Click platform with support for multiple accounts and proxy rotation.
 
+## Register here: 
+
+1st: Download their app : [Rubi - Apps on Google Play](https://play.google.com/store/apps/details?id=com.nemoholding.android.rubi) 
+if you're using IOS just type Rubi on your AppStore, I think that's the app is called
+
+2nd: Use Code: **FARMER**
+
+3rd: Add me to your Trust Circle
+DONE
+
 ## Features
 
 - **Multi-Account Support**: Mine with multiple accounts simultaneously
