@@ -77,6 +77,12 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     main()
     
-    # Keep the main thread alive
-    while not should_exit:
-        time.sleep(1)
+    try:
+        # Keep the main thread alive
+        while not should_exit:
+            time.sleep(1)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    
+    # Add a pause before closing when running in a GUI
+    input("Press Enter to exit...")
